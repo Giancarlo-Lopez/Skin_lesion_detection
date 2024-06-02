@@ -1,5 +1,5 @@
 class ClassForPlot():
-
+        
     def plot_two_images(image1, image2, title1, title2):
         plt.figure(figsize=(8, 5))  
 
@@ -81,7 +81,6 @@ class ClassForPlot():
         plt.tight_layout() 
         plt.show()
 
-  
     def plot_fifteen_images(images, title):
         plt.figure(figsize=(10, 14))  
 
@@ -94,8 +93,6 @@ class ClassForPlot():
         plt.tight_layout()
         plt.subplots_adjust(wspace=0.1, hspace=0.1) 
         plt.show()
-
-
 
     def plot_six_images(images, titles):
 
