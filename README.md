@@ -13,4 +13,4 @@ Una vez clonado el repositorio, se observan dos carpetas, la primera "Imagenes_R
 
 Al ejecutar el código en conjunto con todas las clases se observa el siguiente resultado:
 
-![Interfaz GUI](Imagenes_Resultados/interfaz_4.png)
+![Interfaz GUI](images_results/interfaz_4.png)
