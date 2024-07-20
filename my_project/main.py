@@ -1,5 +1,5 @@
-from clases.gui import GUI
-from clases.libraries import *
+from classes.gui import GUI
+from classes.libraries import *
 
 if __name__ == "__main__":
     root = tk.Tk()
