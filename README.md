@@ -11,6 +11,7 @@ Una vez clonado el repositorio, se observa una carperta con el nombre "my_projec
 
 ## Paso 3: Vizualización de los resultados
 <img src="images/4.png" alt="Color" width="500"/>
-<img src="images/1.png" alt="Color" width="500"/>
-<img src="images/2.png" alt="Color" width="500"/>
 <img src="images/3.png" alt="Color" width="500"/>
+<img src="images/2.png" alt="Color" width="500"/>
+<img src="images/1.png" alt="Color" width="500"/>
+<img src="images/5.png" alt="Color" width="500"/>
