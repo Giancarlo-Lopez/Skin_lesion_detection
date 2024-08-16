@@ -20,121 +20,6 @@ import os
 from PIL import Image, ImageTk
 
 
-#################################################################################################################
-###########################################Graficas##############################################################
-#################################################################################################################
-class ClassForPlot():
-
-    def plot_two_images(image1, image2, title1, title2):
-        plt.figure(figsize=(8, 5))  
-
-        plt.subplot(1, 2, 1)  
-        plt.imshow(image1, cmap='gray')
-        if title1:
-            percentage1 = float(title1.split(': ')[1].strip(' %')) 
-            color1 = 'red' if percentage1 > 19 else 'blue'
-            plt.title(title1, color=color1)
-        plt.axis('off')
-
-        plt.subplot(1, 2, 2)
-        plt.imshow(image2, cmap='gray')
-        if title2:
-            percentage2 = float(title2.split(': ')[1].strip(' %')) 
-            color2 = 'red' if percentage2 > 19 else 'blue'
-            plt.title(title2, color=color2)
-        plt.axis('off')
-        plt.tight_layout()  
-        plt.show()
-
-
-    def plot_two_image(image1, image2, title1, title2):
-        plt.figure(figsize=(10, 6))  
-
-        plt.subplot(1, 2, 1)  
-        plt.imshow(image1, cmap='gray')
-        plt.title(title1)
-        plt.axis('off')
-
-        plt.subplot(1, 2, 2)
-        plt.imshow(image2, cmap='gray')
-        plt.title(title2)
-        plt.axis('off')
-        plt.show()
- 
-    def plot_three_images(image1, image2, image3, title1, title2, title3):
-        plt.figure(figsize=(15, 5))  
-        plt.subplot(1, 3, 1)  
-        plt.imshow(image1, cmap='gray')
-        plt.title(title1)
-        plt.axis('off')
-
-        plt.subplot(1, 3, 2)
-        plt.imshow(image2, cmap='gray')
-        plt.title(title2)
-        plt.axis('off')
-
-        plt.subplot(1, 3, 3)
-        plt.imshow(image3, cmap='gray')
-        plt.title(title3)
-        plt.axis('off')
-
-        plt.tight_layout()  
-        plt.show()
-
-    def plot_four_image(image1, image2, image3, image4, title1, title2, title3, title4):
-        plt.figure(figsize=(8, 5))
-        plt.subplot(2, 2, 1) 
-        plt.imshow(image1, cmap='gray')
-        plt.title(title1)
-        plt.axis('off') 
-
-        plt.subplot(2, 2, 2) 
-        plt.imshow(image2, cmap='gray')
-        plt.title(title2)
-        plt.axis('off')
-
-        plt.subplot(2, 2, 3) 
-        plt.imshow(image3, cmap='gray')
-        plt.title(title3)
-        plt.axis('off')
-
-        plt.subplot(2, 2, 4)
-        plt.imshow(image4, cmap='gray')
-        plt.title(title4)
-        plt.axis('off')
-
-        plt.tight_layout() 
-        plt.show()
-
-  
-    def plot_fifteen_images(images, title):
-        plt.figure(figsize=(10, 14))  
-
-        for i in range(15):
-            ax = plt.subplot(5, 3, i + 1)
-            ax.imshow(images[i], cmap='gray') 
-            ax.set_title(title[i])
-            ax.axis('off')  
-
-        plt.tight_layout()
-        plt.subplots_adjust(wspace=0.1, hspace=0.1) 
-        plt.show()
-
-
-
-    def plot_six_images(images, titles):
-
-        plt.figure(figsize=(10, 7))  
-
-        for i in range(6):
-            plt.subplot(2, 3, i + 1) 
-            plt.imshow(images[i], cmap='gray')  
-            plt.title(titles[i])  
-            plt.axis('off')  
-
-        plt.tight_layout()  
-        plt.subplots_adjust(wspace=0.1, hspace=0.1) 
-        plt.show()  
 
 #################################################################################################################
 ###########################################Operaciones###########################################################
@@ -208,6 +93,7 @@ class ClassForOperationsMasks():
 #################################################################################################################
 ###########################################Segmentacion##########################################################
 #################################################################################################################
+
 class Class_Segmention_Otsu():
 
     def __init__(self,image_path):
@@ -730,26 +616,7 @@ class ClassColor():
 
     def colors_base(self):
 
-        
-        self.reference_colors_1 = {
-        'cafe_claro': np.array([144,76,0]),
-        'cafe_oscuro': np.array([40,0,0]),
-        'rojo': np.array([176, 54, 27]),
-        'blanco': np.array([255, 255, 255]),
-        'negro': np.array([0, 0, 0]),
-        'azul': np.array([83, 167, 174])
-        }
-
-        self.reference_colors_2 = { 
-        'cafe_claro': np.array([210, 180, 140]),
-        'cafe_oscuro': np.array([101, 67, 33]),
-        'rojo': np.array([255, 0, 0]),
-        'blanco': np.array([255, 255, 255]),
-        'negro': np.array([50, 50, 50]),
-        'azul': np.array([0, 0, 255])
-        }
-
-        self.reference_colors_3 = { 
+        self.reference_colors = { 
         'light_brown': np.array([200, 131, 86]),
         'dark_brown': np.array([160, 95, 58]),
         'rojo': np.array([210, 51, 35]),
@@ -761,9 +628,7 @@ class ClassColor():
     
     
     def process_and_classify_pixels(self):
-        #self.reference_colors=self.reference_colors_1
-        #self.reference_colors=self.reference_colors_2
-        self.reference_colors=self.reference_colors_3
+
         color_umbral=5
         image_size = (224, 224)
         pixels = np.zeros((image_size[0], image_size[1], 3), dtype=np.uint8)
@@ -806,9 +671,11 @@ class ClassColor():
     def color_score(self):
         self.color_s=len(self.significant_colors)
         return self.color_s
+        
 #################################################################################################################
 ###########################################Diametro##############################################################
 #################################################################################################################
+
 class ClassDiameter():
 
     def __init__(self,image_path,mask):
@@ -877,7 +744,6 @@ class ClassDiameter():
 #################################################################################################################
 ###########################################GUI####################################################################
 #################################################################################################################
-
 
 
 class GUI(tk.Frame, Class_Segmention_Otsu, ClassAsymmetry, ClassBorder, ClassColor, ClassDiameter):
@@ -1317,9 +1183,7 @@ class CameraApp(tk.Tk):
 
 root = tk.Tk()
 app = GUI(root)
-#root.geometry("1024x560")
 root.geometry("1024x510")
-#root.resizable(False, False)
 root.mainloop()
 
 
