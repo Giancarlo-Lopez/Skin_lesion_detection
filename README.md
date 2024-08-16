@@ -10,7 +10,3 @@ Reemplaza [URL_DEL_REPOSITORIO] con la URL de este repositorio en GitHub.
 Una vez clonado el repositorio, se observan dos carpetas, la primera "images_results" la cual contiene los resultados obtenidos por el sistema de detección, la segunda carpeta "my_project" contiene las clases de cada uno de los métodos empleados en la carpeta "classes", ejecutar el codigo "main.py" y de esta forma se podra visualizar el GUI desarrollado.
 
 ## Paso 3: Visualización de los resultados
-
-Al ejecutar el código en conjunto con todas las clases se observa el siguiente resultado:
-
-![Interfaz GUI](images_results/interfaz_4.png)
