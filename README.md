@@ -11,4 +11,4 @@ Una vez clonado el repositorio, se observa una carperta con el nombre "my_projec
 
 ## Paso 3: Vizualización de los resultados
 ![Texto alternativo](images/1.png)
-<img src="images/1.png" alt="Texto alternativo" width="100"/>
+<img src="images/1.png" alt="Texto alternativo" width="400"/>
