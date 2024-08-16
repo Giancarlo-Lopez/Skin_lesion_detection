@@ -10,7 +10,7 @@ Reemplaza [URL_DEL_REPOSITORIO] con la URL de este repositorio en GitHub.
 Una vez clonado el repositorio, se observa una carperta con el nombre "my_project" donde se encuentra la carpeta de "classes" que contiene las clases de cada uno de los métodos empleados en la carpeta, ejecutar el script "main.py" y de esta forma se podra visualizar el GUI desarrollado. Tambien en la carpeta classes se observa el script "gui_jetson_nano.py", para poder ejecutar el código en el sistema embebido.
 
 ## Paso 3: Vizualización de los resultados
-<img src="images/3.png" alt="Color" width="500"/>
-<img src="images/2.png" alt="Color" width="500"/>
-<img src="images/1.png" alt="Color" width="500"/>
 <img src="images/4.png" alt="Color" width="500"/>
+<img src="images/1.png" alt="Color" width="500"/>
+<img src="images/1.png" alt="Color" width="500"/>
+<img src="images/3.png" alt="Color" width="500"/>
